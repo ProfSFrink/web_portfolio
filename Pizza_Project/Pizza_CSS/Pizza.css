@@ -1,0 +1,75 @@
+/* Advanced Software and Web Developer Diploma */
+/* Course #6 - JavaScript Project / Project #3 - Pizza Menu Project */
+/* by Steven Partlow */
+
+body { /* Styling for the body element */
+    background-color: orangered; /* Set page background to orange red */
+}
+
+h1 { /* Styling for headline one elements */
+    font-family: Calibri, 'Trebuchet MS', sans-serif;
+    color: wheat; /* Set it to this colour */
+    text-shadow: 2px 2px black; /* With a small black text shadow */
+}
+
+h3 { /* Styling for headline three elements */
+    font-family: Calibri, 'Trebuchet MS', sans-serif;
+    color: wheat; /* Set it to this colour */
+    text-shadow: 2px 2px black; /* With a small black text shadow */
+}
+
+#menuBG { /* Styling for ID 'menuBG' */
+    width: 600px; /* Sets the width of the menu to 600 pixels */
+    height: 470px; /* Sets the height of the menu to 470 pixels */
+    margin: 10px auto; /* Centre the menu in the browser window */
+}
+
+#frmMenu { /* Styling for the menu form 'frmMenu' */
+    width: 600px; /* Sets the width of the form to 600 pixels */
+    height: 200px; /* Sets the height of the form to 200 pixels */
+}
+
+#totalPrice { /* Styling for the 'totalPrice' element */
+    width: 200px; /* Sets the width of the element to 200 pixels */
+    height: 190px; /* Sets the height of the element to 190 pixels */
+    margin: 0 auto; /* Centre the element */
+    float: right;
+}
+
+.menu { /* Styling for class 'Size, Vegtable, and Meat toppings' menus */
+    width: 200px; /* Sets the width of the element to 190 pixels */
+    height: 200px; /* Sets the height of the element to 200 pixels */
+    float: left; /* Line up the menus floating in from the left */
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 16px; /* Set font size to 16 pixels */
+    color: whitesmoke; /* Set font to this colour */
+    text-shadow: 2px 2px black; /* With a small black text shadow */
+}
+
+#cart { /* Styling for the ID'cart' */
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 16px; /* Set font size to 16 pixels */
+    color: whitesmoke; /* Set to this colour */
+    text-shadow: 2px 2px black;
+}
+
+#showText { /* Styling for the ID 'showText' */
+    width: 200px; /* Sets the width of the element to 200 pixels */
+    height: 190px; /* Sets the height of the element to 190 pixels */
+    margin: 0px auto; /* Centre the element */
+    float: left;
+}
+
+#cart { /* Styling for the ID 'cart' */
+    top: 0; /* Adjust the vertical position of the element */ margin: 0px auto; /* Centre the element */
+    width: 400px; /* Sets the width of the element to 400 pixels */
+    height: 200px; /* Sets the height of the element to 200 pixels */
+}
+
+#btnOrder { /* Styling for the order button */
+    margin: 10px 0px 0px 100px; /* Add a margin of 10 pixel above the button and 100 pixels below it */
+    width: 100px; /* Sets the width of the button to 100 pixels */
+    height: 40px; /* Sets the height of the buttton to 40 pixels */
+    box-shadow: 2pt 2pt black;
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}

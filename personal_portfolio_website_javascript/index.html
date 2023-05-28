@@ -1,0 +1,257 @@
+<!-- Advanced Software and Web Developer Diploma -->
+<!-- Course #6 JavaScript: Final Assignment - Personal Portfolio Website - JavaScript Update (HTML) -->
+<!-- Started: 01/09/2022 Finished: 06/09/2022 -->
+<!-- by Steven Partlow -->
+
+<!DOCTYPE html>
+<html lang = "en">
+
+     <!-- HEAD Section -->
+    <head>
+        <meta charset = "UTF-8"> <!-- Use the UTF-8 Character Set -->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- To allow us to make adjustments later depending on the size of the display -->
+        <title>Steven Partlow's Personal Portfolio Website</title>
+        <!-- Favicon that appears as an icon in the browser tab -->
+        <link rel="shortcut icon" type="img/jpg" href="./images/favicon-512x512.png">
+        <!-- Link to Portfolio CSS Stylesheet -->
+        <link rel = "stylesheet" type = "text/css" href = "./css/portfolio.css">
+        <!-- Link to Font Awesome CDN CSS Stylesheet for custom icons on the Navbar -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    </head> <!-- End of HEAD Section -->
+    
+    <!-- BODY Section -->
+    <body> 
+
+        <!-- NAVBAR Section -->
+        <div class = "Navbar">
+            <a class = "active" href = "#Home"><i class = "fa fa-home"></i></a> <!-- Link to the Top of the page -->
+            <a class = "middle-links" href = "#Slideshow"><i class="fa fa-image"></i></a> <!-- Link to Image Slideshow -->
+            <a class = "middle-links" href = "#About"><i class = "fa fa-male"></i></a> <!-- Link to ABOUT SECTION -->
+            <a class = "middle-links" href = "#GitHub"><i class = "fa fa-github"></i></a> <!-- Link to GITHUB SECTION -->
+            <!-- Display the contact form if the contact icon is clicked once and then hide the form when it is double clicked on -->
+            <a class = "contact-link" onclick = "showForm()" ondblclick = "hideForm()"><i class = "fa fa-envelope"></i></a> <!-- Link to CONTACT SECTION -->
+        </div> <!-- End of DIV for NAVBAR Section -->
+
+        <!-- Add between the site navbar and the first heading -->
+        <br>
+        <br>
+
+        <!-- Background Video -->
+        <div id = "Home">
+            <video autoplay muted loop id = "Background_Video">
+                <source src = "images/videos/Blurred_Video_of_Scripts_Being_Typed.mp4" type = "video/mp4">
+                <!-- Display the below message if the browser does not support the VIDEO tag -->
+                Your browser does not supoort HTML5 Video.
+            </video>
+        </div> <!-- End of DIV for Background Video -->
+
+        <!-- Video Overlay Text -->
+        <div class = "Video_Overlay_Text">
+            <h2 class = "first-head white-text">Software and Web Developer</h2>
+            <h1 class = "second-head white-text">Steven Partlow BSc</h1>
+            <p class = "third-head">
+                <br> Hi, i'm Steven a software and web developer currently training in Ipswich in the UK. 
+                <br>
+                <br> Welcome to my Portfolio Website. Thanks for visiting! 
+            </p>
+        </div> <!-- End of DIV for Video Overlay Text -->
+
+        <!-- Image Slideshow -->
+        <div id = "Slideshow">
+
+            <div class = "Slideshow_Background"> <!-- Background the Slideshow sits above -->
+
+                <div class = "Slideshow_Container"> <!-- The container the slieshow appears in -->
+
+                    <!-- Slideshow Image of me -->
+                    <div class="mySlides Fade_Effect">
+                        <img class = "Slideshow_Images" src = "./images/Photo_of_me.jpeg" alt = "Photo of Steven">
+                        <div class = "Image_Text">Hi i'm Steven a Software and Web Developer in Training.</div>
+                    </div> <!-- End of First Image DIV -->
+
+                    <!-- Slideshow HTML5 Image -->
+                    <div class="mySlides Fade_Effect">
+                        <img class = "Slideshow_Images" src = "./images/HTML5_Logo.png" alt = "HTML5 Logo">
+                        <div class = "Image_Text">Fully trained in HTML5</div>
+                    </div> <!-- End of Second Image DIV -->
+
+                    <!-- Slideshow CSS3 Image -->
+                    <div class="mySlides Fade_Effect">
+                        <img  class = "Slideshow_Images" src = "./images/CSS3_Logo.png" alt = "CSS3 Logo">
+                        <div class = "Image_Text">alongside CSS3,</div>
+                    </div> <!-- End of Third Image DIV -->
+
+                    <!-- Slideshow JavaScript Image -->
+                    <div class="mySlides Fade_Effect">
+                        <img  class = "Slideshow_Images" src = "./images/JavaScript_Logo.png" alt = "JavaScript Logo">
+                        <div class = "Image_Text">JavaScript,</div>
+                    </div> <!-- End of Fourth Image DIV -->
+
+                    <!-- Slideshow C# Image -->
+                    <div class="mySlides Fade_Effect">
+                        <img  class = "Slideshow_Images" src = "./images/C-Sharp_Logo.png" alt = "C-Sharp Logo">
+                        <div class = "Image_Text">C# and .NET Framework</div>
+                    </div> <!-- End of Fifth Image DIV -->     
+
+                     <!-- Slideshow Python Image -->
+                    <div class="mySlides Fade_Effect">
+                        <img  class = "Slideshow_Images" src = "./images/Python_Logo.png" alt = "Python Logo">
+                        <div class = "Image_Text">and Python.</div>
+                    </div> <!-- End of Sixth Image DIV -->                   
+
+                    <!-- Slideshow GitHub Image - clicking on image will take user to GitHub Profile -->
+                    <div class="mySlides Fade_Effect">
+                        <a href = "https://github.com/ProfSFrink" target  = "_blank"><img  class = "Slideshow_Images" src = "./images/GitHub_Logo.png" alt = "GitHub Logo"></a>
+                        <div class = "Image_Text">View my GitHub.</div>
+                    </div> <!-- End of Seventh Image DIV -->
+        
+                    <!-- Next and previous buttons -->
+                    <a class = "Back" onclick = "plusSlides(-1)">&#10094;</a>
+                    <a class = "Next" onclick = "plusSlides(1)">&#10095;</a>
+            
+                </div> <!-- End of DIV for Slideshow_Container -->
+                <br>
+        
+                <!-- The dots/circles at the bottom of each image -->
+                <div style="text-align:center"> <!-- Center dots beneath the images -->
+                    <span class = "dot" onclick = "currentSlide(1)"></span> <!-- Executes JS function 'currentSlide' which set the gallary to the first image -->
+                    <span class = "dot" onclick = "currentSlide(2)"></span> <!-- Executes JS function 'currentSlide' which set the gallary to the second image -->
+                    <span class = "dot" onclick = "currentSlide(3)"></span> <!-- Executes JS function 'currentSlide' which set the gallary to the third image -->
+                    <span class = "dot" onclick = "currentSlide(4)"></span> <!-- Executes JS function 'currentSlide' which set the gallary to the fourth image -->
+                    <span class = "dot" onclick = "currentSlide(5)"></span> <!-- Executes JS function 'currentSlide' which set the gallary to the fifth image -->                                        
+                    <span class = "dot" onclick = "currentSlide(6)"></span> <!-- Executes JS function 'currentSlide' which set the gallary to the sixth image -->
+                    <span class = "dot" onclick = "currentSlide(7)"></span> <!-- Executes JS function 'currentSlide' which set the gallary to the seventh image -->
+                </div> <!-- End of DIV for Dots -->
+
+            </div> <!-- End of DIV for Slideshow Background -->
+
+        </div> <!-- End of DIV for Slideshow -->
+
+        <!-- TOP ROW -->
+        
+        <div class = "Row" id = "About">
+            
+            <!-- Top / Left - About Section -->
+            <div class = "Column_1">
+                <h1>About</h1>
+                <p>
+                    I'm a software developer in training living in Ipswich, in the UK. I am currently studying with Pitman Training both at home and on campus, working through the Advanced Software and Web Developer Diploma which is provided by <a href = "https://www.learncodinganywhere.com/" target="_blank">The Tech Academy</a>. When I have finished the course I will be fully trained in HTML, CSS, JavaScript, SQL and C# and hoping to work as a software and web developer. I am also fully trained in Python having completed a <a href = "https://www.udemy.com/course/complete-python-bootcamp/" target="_blank">bootcamp</a> on Udemy, and also have BSc in Software Engineering (2.2) from <a href = "https://www.uos.ac.uk/" target="_blank">Suffolk University</a> which I completed in 2001.<br>
+                </p>
+                <p>
+                    I currently work for the East of England CO-OP and have over 20+ years experience working in the industry. In my spare time I enjoy running, reading and gaming including building gaming PCs as hobby so I am fully versed in computer hardware.
+                </p>
+            </div> <!-- End of DIV for About Section -->
+
+            <!-- Top / Right - GitHub section -->
+            <div class = "Column_2 Github" id = "GitHub">
+                <h1>GitHub</h1>
+                <p>My coding portfolio can be viewed on my GitHub profile:</p>
+                    <!-- Link to GitHub Profile -->
+                    <p class = "Center">
+                        <a class = "Github" href = "https://github.com/ProfSFrink" target = "_blank"><i class = "fa fa-github"></i> My GitHub Profile</a>
+                    </p>
+                    <p class = "Center">MY PROJECTS</p>
+                    <!-- Link to Project code -->
+                    <p class = "Center">
+                        <a href = "https://github.com/ProfSFrink/JavaScript_Course_Project_Files/blob/main/personal_portfolio_website_javascript/index.html" target = "_blank"><i class = "fa fa-github"></i> This Portfolio Website</a>
+                    </p>
+                    <!-- Link to Project code -->
+                    <p class = "Center">
+                        <a href = "https://github.com/ProfSFrink/Videogame-Database-Project/blob/main/vg_database.py" target = "_blank"><i class = "fa fa-github"></i> Python Bootcamp Capstone Project - Command Line Database Project</a>
+                    </p>
+                    <!-- Link to Project code -->
+                    <p class = "Center">
+                        <a href = "https://github.com/ProfSFrink/Database_and_SQL_Course-Basic_SQL_Projects/blob/master/School%20Database%20Assignment.sql" target = "_blank"><i class = "fa fa-github"></i> SQL Course Project: School Database</a>
+                    </p>
+                    <!-- Link to Project code -->
+                    <p class = "Center">
+                        <a href = "https://github.com/ProfSFrink/C-Sharp-Coding-Projects/tree/master/CarInsurance/CarInsurance" target = "_blank"><i class = "fa fa-github"></i> ASP.NET MVC Web App - Car Insurance Quote App</a>
+                    </p>
+            </div> <!-- End of DIV for GitHub section -->
+
+        </div> <!-- End of About Row -->
+
+        <!-- BOTTOM ROW -->
+
+        <div class = "Row">
+
+            <!-- Bottom / Left - Skills Column -->
+            <div class = "Column_2 Small">
+                <h1>Skills</h1>
+                <!-- Display Skills as an unordered list -->
+                <ul>
+                    <li>HTML</li>
+                    <li>CSS - including Bootstrap</li>
+                    <li>JavaScript</li>
+                    <li>Object-Orientated Programming</li>
+                    <li>Python</li>
+                    <li>GIT Version Control</li>
+                    <li>SQL and SQL Management Studio</li>
+                    <li>C# and .NET Framework</li> 
+                </ul>
+            </div> <!-- End of DIV for Skills column -->
+
+            <!-- Bottom / Right - LinkedIN Image and Link -->
+            <div class = "Column_1 Small">
+                <br>
+                <br>
+                <br>
+                <a href="https://www.linkedin.com/in/steven-partlow-9375b0236/" target="_blank"><img src = "images/linkedin.png" alt = "LinkedIN Image"></a>
+            </div> <!-- End of DIV for LinkedIN -->
+
+        </div> <!-- End of DIV for Bottom row -->
+
+        <!-- Contact Form -->
+        <div id = "Contact">
+            <!-- Contact Form popup Button when the user clicks the button the contact form displays -->
+            <button class = "Sticky_Contact_Button" onclick = "showForm()">CONTACT</button>
+
+            <div class = "Popup_Contact_Form" id = "Contact_Me">
+                <!-- Connection to formspree.io which sends submitted form data to -->
+                <form action = "https://formspree.io/f/mayvzzvw" method = "POST" class = "Contact_Form_Container">
+                    <h1 class = "Contact_Header">Contact</h1>
+
+                    <!-- Name Input -->
+                    <label for = "name"><b>Name:</b></label>
+                     <input type = "text" placeholder = "Type your full name here" name = "name" required>
+
+                    <!-- Phone number Input -->
+                    <label for = "phone"><b>Phone:</b></label>
+                     <input type = "text" placeholder = "Type your phone number here" name = "phone">
+
+                    <!-- Email Input -->
+                    <label for = "email"><b>E-Mail:</b></label>
+                     <input type = "text" placeholder = "Type your e-mail address here" name = "email" required>
+
+                    <!-- Message Input -->
+                    <label for = "message"><b>Message:</b></label>
+                     <input type = "text" placeholder = "Type your message here" name = "message">
+
+                    <!-- SUBMIT Button -->
+                    <button type = "submit" class = "Submit_Button">SUBMIT</button>
+
+                    <!-- CLOSE Form Button -->
+                    <button type = "button" class = "Close_Button" onclick = "hideForm()">CLOSE</button>
+                </form> <!-- End of Contact FORM Container -->
+
+            </div> <!-- End of DIV for Contact form-->
+
+        </div> <!-- End of DIV for Contact Section -->
+
+        <!-- FOOTER Section -->
+        <footer>
+            <p class = "center">&copy; Steven Partlow BSc. 2023, 
+                <!-- LinkedIn Link -->
+                <a href = "https://www.linkedin.com/in/steven-partlow-9375b0236/" target = "_blank"><i class = "fa fa-linkedin"></i></a>&nbsp;
+                <!-- Twitter Link -->
+                <a href = "https://twitter.com/ProfSFrink" target ="_blank"><i class = "fa fa-twitter"></i></a>
+                <!-- Facebook Link -->
+                <a href = "https://www.facebook.com/profsfrink/" target = "_blank"><i class = "fa fa-facebook"></i></a>
+            </p>
+        </footer> <!--End of FOOTER Section -->
+
+        <!-- Link to JavaScript that controls our image slideshow and contact form -->
+        <script src = "./js/portfolio.js"></script>
+    </body>  <!-- End of BODY Section -->
+
+</html> <!-- End of HTML Document -->

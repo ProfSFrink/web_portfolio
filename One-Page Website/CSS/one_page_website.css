@@ -1,0 +1,259 @@
+/* Advanced Software and Web Developer Diploma - Part VI - JavaScript Course */
+/* One-Page Website Assignment - JavaScript Update */
+/* by Steven Partlow */
+
+ul {  /* Style unordered lists to use squares */
+    font-family: Helvectia, Calibri, sans-serif;
+    font-weight: 900;
+    list-style-type: square; 
+} 
+
+h1 { /* Style h1 elements */
+    font-family: Helvectia, Calibri, sans-serif;
+    font-size: 1.5cm;
+    font-weight: 900;
+    line-height: 1.3;
+    text-shadow: 1px 1px 2px rgba(138, 129, 129, 0.9);
+}
+
+h2, h3 { /* Style h2, h3 elements */
+    font-family: Helvectia, Calibri, sans-serif;
+    font-size: 28px;
+    font-weight: 900;
+    line-height: 1.3;
+    text-shadow: 1px 1px 2px rgba(138, 129, 129, 0.9);
+}
+
+.menu { /* Styles the nav bar */
+    background-color: #333;
+    overflow: hidden;
+    position: fixed; /* Keeps the navbar at the top of the screen even if we scroll down */
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1; /* Keeps the navbar above everything else */
+}
+
+.menu a { /* Styles the links inside navigaion bar */
+    float: left;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-family: Helvectia, Calibri, sans-serif;
+    font-size: 17px;
+}
+
+.menu a:hover { /* Change the colour of link in the nav bar when on hover */
+    background-color: #ddd;
+    color: black;
+}
+
+.menu a.active { /* Add a colour to the active current link */
+    background-color: rgb(164, 14, 14);
+    color: white;
+}
+
+.menu-right { /* Right-Align the 'menu-right' elements so about us and contact above in the top-right of the browser */
+    float: right;
+}
+
+#about, article { /* Styles the text in the main article */
+    font-family: Helvectia, Calibri, sans-serif;
+    font-size: 18px;
+    font-weight: 200;
+    line-height: 1.3;
+    text-shadow: 1px 1px 2px rgba(138, 129, 129, 0.9);
+}
+
+.boxart-image { /* Styles the head image for the site */
+    text-align: center; /* Centers the image in the middle of the browser */
+    width: auto; /* Auto adjusts the height and width of the image depeanding */
+    height: auto; /* on the size of the browser window */
+    max-width: 100%;
+    max-height: 100%;
+}
+.media_container { /* Styles the container that screenshots and videos appear in */
+    display: flex;
+    flex-wrap: wrap;
+    padding-top: 8px;
+    padding-bottom: 5px;
+    padding-left: 10px;
+    border-radius: 20px;
+    border: 1px solid #424549;
+    background-color: rgb(164, 14, 14);
+    box-shadow: 2px 2px black;
+}
+
+/* JavaScript Course - Challenge #22: Add a Lightbox */
+
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* Styling for the individual screenshot thumbnails on the main web site */
+.column {
+    float: left; /* Start positioning the image from the left */
+    width: 276px; /* Sets the width and height of each screenshot */
+    height: 155px;
+    position: relative; /* Then position each image releative to the last one */
+    line-height: 0;
+    margin-right: 0.1cm; /* Small gap to right of each image */
+    margin-bottom: 0.1cm; /* Small gap beneath each image */
+    overflow: hidden;
+    border: 1px solid black; /* Give each image a small border */
+    box-shadow: 2px 2px black;
+}
+
+/* The modal background that appears behind the image */
+.modal {
+    display: none; /* By default the modal is hidden */
+    position: fixed; /* It's postion is fixed in the middle of the browser */
+    z-index: 1;  /* Puts the modal above the main web page*/
+    padding-top: 25px; /* Gap between the top of the page and the start of the image */
+    left: 0; /* The modal starts in the top-left corner of the display */
+    top: 0;
+    width: 100%; /* The modal fills the full screen */
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(164, 14, 14, 0.75);
+}
+
+/* Modal Content - the image that appears when we click on one */
+.modal-content {
+    position: relative;
+    background-color: #fefefe;
+    margin: auto;
+    padding: 0;
+    width: 100%;
+    max-width: 1200px;
+    box-shadow: 5px 5px black;
+}
+
+/* Styling for the button that closes the modal */
+.close {
+    color: white;
+    position: absolute;
+    top: 10px;
+    right: 25px;
+    font-size: 35px;
+    font-weight: bold;
+}
+
+/* Change the styling when we hover over the close button in the top-right of the modal */
+.close:hover,
+.close:focus {
+    color: #999;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Hides the slides by default */
+.mySlides {
+    display: none;
+}
+
+/* Styling for next & previous buttons */
+.prev,
+.next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -50px;
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+    -webkit-user-select: none;
+}
+
+/* Position the "next button to the right */
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Styling for the number text (1 / 12 etc) that appears in the top-left of the modal */
+.numbertext {
+    color: #f2f2f2;
+    font-size: 20px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+}
+
+img { 
+    margin-bottom: -4px;
+}
+
+/* Styling caption text that appears beneath each modal image */
+.caption-container {
+    text-align: center;
+    font-family: Helvetica, Arial, sans-serif;
+    font-weight: 600;
+    background-color: rgb(56, 56, 56);
+    padding: 2px 16px;
+    margin-bottom: 10px;
+    color: white;
+}
+
+.demo {
+    /* Make the thumbnail images at the bottom of the modal slightly transparent */
+    opacity: 0.6;
+}
+
+/* Make any thumbnail image within the modal be fully visiable when they are either the active image or being hovered over by the user */
+.active,
+.demo:hover {
+    opacity: 1;
+}
+
+img.hover-shadow {
+    transition: 0.3s;
+}
+
+/* Give each thumbnail image on the main site a shadow effect when we hover over it */
+.hover-shadow:hover {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+/* End Challenge #22 */
+
+.video-container { /* Adds a margin between videos */
+    margin: 20px;
+}
+
+.contact_form { /* Styles the background and border around the contact form */
+    background-color: rgb(164, 14, 14);
+    border: 2px;
+    box-shadow: 2px 2px black;
+    border-radius: 20px;
+}
+
+.contact_form_input { /* Styles the text labels for the contact form inputs */
+    margin: 5px;
+    padding-left: 5px;
+    padding-right: 5px;
+    font-family: Helvectia, Calibri, sans-serif;
+}
+
+.contact_form_input input[type="text"] { /* Styles the contact form input boxes */
+    border-radius: 5px;
+    color: darkslategray;
+}
+
+footer { /* Styles the footer element */
+    font-family: Arial, Helvetica, sans-serif;
+}
