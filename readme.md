@@ -4,7 +4,7 @@ This is a collection of the Web projects that are part of my portfolio thus far,
 
 &nbsp;
 
-## __Personal Portfolio Website__ [(CODE)]()
+## __Personal Portfolio Website__ [(CODE)](https://github.com/ProfSFrink/web_portfolio/tree/master/personal_portfolio_website_javascript)
 
 ---
 
@@ -14,7 +14,7 @@ Project text goes here.
 
 &nbsp;
 
-## __JavaScript Tic Tac Toe Game__ [(CODE)]()
+## __JavaScript Tic Tac Toe Game__ [(CODE)](https://github.com/ProfSFrink/web_portfolio/tree/master/TicTacToe)
 
 ---
 
@@ -24,7 +24,7 @@ Project text goes here.
 
 &nbsp;
 
-## __JavaScript Calculator__ [(CODE)]()
+## __JavaScript Calculator__ [(CODE)](https://github.com/ProfSFrink/web_portfolio/tree/master/calculator)
 
 ---
 
@@ -34,7 +34,7 @@ Project text goes here.
 
 &nbsp;
 
-## __JavaScript ToDo Appication__ [(CODE)]()
+## __JavaScript ToDo Appication__ [(CODE)](https://github.com/ProfSFrink/web_portfolio/tree/master/todo_app)
 
 ---
 
@@ -44,7 +44,7 @@ Project text goes here.
 
 &nbsp;
 
-## __Pizza Ordering Application__ [(CODE)]()
+## __Pizza Ordering Application__ [(CODE)](https://github.com/ProfSFrink/web_portfolio/tree/master/Pizza_Project)
 
 ---
 
@@ -54,7 +54,7 @@ Project text goes here.
 
 &nbsp;
 
-## __Simple Hobby Blog Site utilising Bootstrap__ [(CODE)]()
+## __Simple Hobby Blog Site utilising Bootstrap__ [(CODE)](https://github.com/ProfSFrink/web_portfolio/tree/master/bootstrap4_project)
 
 ---
 
@@ -64,7 +64,7 @@ Project text goes here.
 
 &nbsp;
 
-## __Gaming Blog__ [(CODE)]()
+## __Gaming Blog__ [(CODE)](https://github.com/ProfSFrink/web_portfolio/tree/master/One-Page%20Website)
 
 ---
 
