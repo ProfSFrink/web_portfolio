@@ -8,9 +8,9 @@ This is a collection of the Web projects that are part of my portfolio thus far,
 
 ---
 
-### __IMPLEMENTS: HTML, CSS and JavaScript, Images, Web Forms, Events, SlideShow, Navbar, Responsive Web Design, UI__
+### __IMPLEMENTS: HTML, CSS, JavaScript, Images, Web Forms, Events, SlideShow, Navbar, Responsive Web Design, UI__
 
-Project text goes here.
+This is the source code and accompanying media for my personal portfolio website which can be found [here](www.stevenpartlow.com). The site was coded from scratch using Visual Studio Code. The layout for the site is the standard layout which starts with a navbar, followed by a jumbotron style site header with scrolling text, then the site uses the two column, two row approach for the bio and github links in the top row with the skills and linkedIn sections below, followed by the footer then a button to bring up the contact form, which makes use of formspree to store any information entered by the user. The site is responsive and works on both desktop and mobile devices. The header also contains a simple slideshow made with JavaScript, I import the GT Walshiem Pro font from the the font awesome library so it can be used by CSS.
 
 &nbsp;
 
@@ -18,9 +18,9 @@ Project text goes here.
 
 ---
 
-### __IMPLEMENTS: HTML, CSS and JavaScript, Arrays, Functions__
+### __IMPLEMENTS: HTML, CSS and JavaScript, Arrays, Functions, Logical Operators, Canvas, Audio, Images__
 
-Project text goes here.
+A Tic Tac Toe game running on JavaScript, a simple looking web application that allows the user to play a game of Tic Tac Toe against the computer. The game itself is a 3 by 3 HTML table with some simple CSS styling, the game itself run off JavaScript. The main game logic is within the function placeXOrO which firstly checks if the square being clicked on is empty, then determing which players turn it is, moves are recorded within an array this is to allow checking of win conditions. A function called computersTurn is used for the computer to take their turn, after which we check for a win by using the checkWinConditions function, this functions has a sub fuction called arrayIncludes in which we pass in three square locations if all return true then we have a winner, then the drawWinLine function draws a win line across the three winning squares, before playing the winner audio and reseting the game so the user can play again.
 
 &nbsp;
 

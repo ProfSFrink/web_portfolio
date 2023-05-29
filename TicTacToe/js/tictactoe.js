@@ -1,5 +1,4 @@
-// Advanced Software and Web Developer Diploma
-// Course #6 - JavaScript Project / Project # 1 - Tic Tac Toe Game
+// JavaScript Tic Tac Toe Game
 // by Steven Partlow
 
 //This variable keeps track of who's turn it is.
@@ -10,22 +9,21 @@ let selectedSquares = [];
 // This function is for placing an x or o on a square.
 function placeXOrO(squareNumber) {
     // This condition ensures a square hasn't been selected already.
-    // The .some() method is used to check each element of selectedSquare array to
-    // see if it contains the square number clicked on.
+    // The .some() method is used to check each element of selectedSquares array to see if it contains the square number clicked on.
     if (!selectedSquares.some(element => element.includes(squareNumber))) {
         // This variable retrieves the html element id that was clicked
         let select = document.getElementById(squareNumber);
         // This condition check who's turn it is.
         if (activePlayer === 'X') {
-            // If activePlayer is equal to 'X', the x.png is in HTML
+            // If activePlayer is equal to 'X', the x.png is used
             select.style.backgroundImage = 'url("images/x.png")';
-        // Active player may only be 'X' or 'O' so, if not 'X' it must be 'O'
+        // Active player may only be 'X' or 'O' so, if not 'X' it must be 'O'.
         } // End IF 
         else {
-            // if activePlayer is equal to 'O', the o.png is placed in HTML.
+            // if activePlayer is equal to 'O', the o.png is used.
             select.style.backgroundImage = 'url("images/o.png")';
         } // End ELSE
-        // squareNumber and activePlayer are concatenated together and added to array
+        // squareNumber and activePlayer are concatenated together and added to array, recording the move in the selectedSquares array.
         selectedSquares.push(squareNumber + activePlayer);
         // This calls a function to check for any win conditions.
         checkWinConditions();
@@ -33,7 +31,7 @@ function placeXOrO(squareNumber) {
         if (activePlayer === 'X') {
             // If active player is 'X' change it to 'O'.
             activePlayer = 'O';
-        // If active player is anything other than 'X'.
+        // If active player is 'O' then switch to 'X'.
         } // End IF 
         else {
             // Change the activePlayer to 'X'.
