@@ -1,5 +1,4 @@
-// Advanced Software and Web Developer Diploma
-// Course #6 - JavaScript Project / Project #2 - Pizza Menu Project
+// JavaScript Pizza Menu Ordering
 // by Steven Partlow
 
 function getReceipt() { // Define function 'getReceipt'
